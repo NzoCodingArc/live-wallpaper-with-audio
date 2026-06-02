@@ -18,10 +18,10 @@ jobs:
           distribution: 'temurin'
 
       - name: Accept Android SDK licenses
-        run: yes | sdkmanager --licenses
+        run: yes | $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager --licenses
 
       - name: Install Android SDK Platform 36
-        run: sdkmanager "platforms;android-36" "build-tools;35.0.0"
+        run: $ANDROID_SDK_ROOT/cmdline-tools/latest/bin/sdkmanager "platforms;android-36" "build-tools;35.0.0"
 
       - name: Install Gradle 8.11.1
         run: |
