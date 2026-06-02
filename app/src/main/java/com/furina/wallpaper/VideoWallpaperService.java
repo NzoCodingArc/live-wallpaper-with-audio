@@ -53,6 +53,7 @@ public class VideoWallpaperService extends WallpaperService {
                 if (mediaPlayer == null) return;
                 mediaPlayer.setSurface(holder.getSurface());
                 mediaPlayer.setLooping(true);
+                mediaPlayer.setVideoScalingMode(MediaPlayer.VIDEO_SCALING_MODE_SCALE_TO_FIT_WITH_CROPPING);
                 mediaPlayer.setVolume(1.0f, 1.0f);
                 mediaPlayer.start();
             } catch (Exception e) {
